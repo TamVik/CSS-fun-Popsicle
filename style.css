@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5603ad;
+}
+
+.popsicle {
+    height: 18.75em;
+    width: 13.75em;
+    border: 1px solid #fff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: calc(50% - 3.25em);
+    border-radius: 7.5em 7.5em .9em .9em;
+    background: repeating-linear-gradient(
+        -30deg,
+        #ff5d8f 0,
+        #ff5d8f 5em, 
+        #e4ff1a 5em, 
+        #e4ff1a 10em,
+        #04e762 10em,
+        #04e762 15em,
+        #008bf8 15em,
+        #008bf8 20em
+        );
+    background-size: 375em;
+    animation: move 15s infinite linear;
+}
+
+@keyframes move {
+    100% {
+        background-position: -312.5em;
+    }
+}
+
+.popsicle:before {
+    position: absolute;
+    content: "";
+    height: 12.5em;
+    width: 1.25em;
+    background-color: #fff2f2;
+    opacity: .6;
+    border-radius: 1.25em;
+    top: 5em;
+    left:1.25em;
+}
+
+.popsicle:after {
+    position: absolute;
+    content: "";
+    height: 7.5em;
+    width: 3.12em;
+    background: linear-gradient(#a85311 1.25em, #da7e37 1.25em);
+    left: 5.12em;
+    top: 18.75em;
+    border-radius: 0 0 1.87em 1.87em;
+}
